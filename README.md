@@ -45,23 +45,46 @@ const App = () => {
 
 ReactDOM.render(<App />, document.getElementById('root'));
 
-/* File: package.json */
 {
-  "name": "amcpro-demo",
-  "version": "1.0.0",
-  "private": true,
-  "dependencies": {
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "react-scripts": "4.0.3"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  }
-}
+  "name": "amcpro",
+  "version": "0.1.0",
+  "lockfileVersion": 2,
+  "requires": true,
+  "packages": {
+    "": {
+      "name": "amcpro",
+      "version": "0.1.0",
+      "dependencies": {
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0",
+        "react-scripts": "5.0.1"
+      }
+    },
+    "node_modules/react": {
+      "version": "18.2.0",
+      "resolved": "https://registry.npmjs.org/react/-/react-18.2.0.tgz",
+      "integrity": "sha512-6pGpU9b6c3cBxhsA6bV7LF6qKqk8IsWEHqY9kRleXvWfF/1NYhguWCI7hPBnB7/W3z4Ckqh3U66SkorqKHcLpw==",
+      "dependencies": {
+        "loose-envify": "^1.1.0"
+      }
+    },
+    "node_modules/react-dom": {
+      "version": "18.2.0",
+      "resolved": "https://registry.npmjs.org/react-dom/-/react-dom-18.2.0.tgz",
+      "integrity": "sha512-tO6lAAX8jtCRFfK0fPTuTst6f/0YML2+SLYUNNQjC9GmJSyGyI7UIfzmh8lA+5EAXDC7vYqN73E4qWrDhH+UMA==",
+      "dependencies": {
+        "react": "^18.2.0"
+      }
+    },
+    "node_modules/react-scripts": {
+      "version": "5.0.1",
+      "resolved": "https://registry.npmjs.org/react-scripts/-/react-scripts-5.0.1.tgz",
+      "integrity": "sha512-rv9Z0u6wvlG9H9v9zGqReuR5ht3zG7kZKBS8slO0OiDqFqIhNlKf3FPWvGO1+YFhQ8dYULPTZcoJgI2KfI9/AQ=="
+    },
+    "node_modules/loose-envify": {
+      "version": "1.4.0",
+      "resolved": "https://registry.npmjs.org/loose-envify/-/loose-envify-1.4.0.tgz",
+      "integrity": "sha51
 
 /* File: public/index.html */
 <!DOCTYPE html>
