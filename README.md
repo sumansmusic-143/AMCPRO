@@ -1,63 +1,92 @@
 # AMCPRO
-// package.json
+// ✅ DG's VITE + REACT FULL PROJECT STRUCTURE
+// Clean and ready to deploy on Vercel
+
+// 👉 Step 1: Create project using Vite
+// Run this in your terminal (not inside any existing folder):
+
+npm create vite@latest amcpro -- --template react
+
+cd amcpro
+
+npm install
+
+
+// 👉 Step 2: Update package.json (optional if using TypeScript or Tailwind, let me know if needed)
+
 {
   "name": "amcpro",
-  "version": "0.1.0",
+  "version": "0.0.0",
   "private": true,
-  "dependencies": {
-  "react": "^18.2.0",
-  "react-dom": "^18.2.0",
-  "react-scripts": "5.0.1"
-}
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.0.0",
+    "vite": "^4.0.0"
   }
 }
 
-// index.html (place inside public/index.html)
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>AMC PRO</title>
-  </head>
-  <body>
-    <div id="root"></div>
-  </body>
-</html>
 
-// src/index.js
+// 👉 Step 3: vite.config.js
+
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
+
+export default defineConfig({
+  plugins: [react()],
+});
+
+
+// 👉 Step 4: Basic src structure
+// src/main.jsx
+
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
+import './index.css';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
+ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <App />
   </React.StrictMode>
 );
 
-// src/App.js
-import React from 'react';
+
+// src/App.jsx
 
 function App() {
   return (
-    <div style={{ textAlign: 'center', marginTop: '50px' }}>
-      <h1>Welcome to AMC PRO</h1>
-      <p>Your app is deployed successfully!</p>
+    <div style={{ textAlign: 'center', padding: '40px' }}>
+      <h1>Hello DG, Welcome to AMC PRO 🎬</h1>
+      <p>This is a clean Vite + React app ready for Vercel Deployment!</p>
     </div>
   );
 }
 
 export default App;
 
-// .gitignore
-node_modules
-build
-.env
-.DS_Store
+
+// 👉 Step 5: src/index.css (optional styling)
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+
+// 👉 Step 6: Deploy to Vercel
+1. Push to GitHub
+2. Go to [vercel.com](https://vercel.com)
+3. Import project from GitHub
+4. Vercel will auto-detect Vite and build it
+
+✅ Done!
